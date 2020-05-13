@@ -2,6 +2,7 @@ package com.mynutrient.demo.dto.domain.posts;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.junit.After;
@@ -45,5 +46,21 @@ public class PostsRepositoryTest {
 		assertThat(posts.getTitle()).isEqualTo(title);
 		assertThat(posts.getContent()).isEqualTo(content);
 	}
+	
+	@Test
+	public void BaseTimeEntity_µî·Ï() {
+		LocalDateTime now = LocalDateTime.of(2020,5,13,0,0,0);
+		postsRepository.save(Posts.builder().title("title").content("contentt").author("jejeong000@gmail.com").build());
+		
+		
+		List<Posts> postsList = postsRepository.findAll();
+		   
+		Posts posts = postsList.get(0);
+		
+		
+		assertThat(posts.getCreatedDate()).isAfter(now);
+		assertThat(posts.getModifiedDate()).isAfter(now);
+	}
+	
 	
 }

@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.mynutrient.demo.BaseTimeEntity;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity //
-public class Posts {
+public class Posts extends BaseTimeEntity{
 	
 	@Id//해당 테이블의 pk
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
