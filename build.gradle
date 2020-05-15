@@ -31,4 +31,5 @@ dependencies {
     compile('com.h2database:h2')
     annotationProcessor 'org.projectlombok:lombok' // 생성자가 안만들어지는 이슈로... gradle 5버전 이상 부터 어노테이션을 구별해서 추가해야 한다고 함...
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile ('org.springframework.boot:spring-boot-starter-mustache')
 }
