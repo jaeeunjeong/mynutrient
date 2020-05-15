@@ -21,30 +21,28 @@ import com.mynutrient.demo.web.HelloController;
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
-	
+
 	@Autowired
 	private MockMvc mvc;
-	
+
 	@Test
-	public void hello가_리턴된다() throws Exception{
-		
+	public void hello() throws Exception {
+
 		String hello = "hello";
-		
-		mvc.perform(get("/hello"))
-		.andExpect(status().isOk())
-		.andExpect(content().string(hello));
+
+		mvc.perform(get("/hello")).andExpect(status().isOk()).andExpect(content().string(hello));
 	}
+
 	@Test
-	public void helloDto가_리턴된다() throws Exception{
-		
+	public void helloDto() throws Exception {
+
 		String name = "test";
 		int amount = 1000;
-		
+
 		HelloResponseDto dto = new HelloResponseDto(name, amount);
-		
+
 		mvc.perform(get("/hello/dto").param("name", name).param("amount", String.valueOf(amount)))
-		.andExpect(status().isOk())
-		.andExpect(jsonPath("$.name", is(name)))
-		.andExpect(jsonPath("$.amount", is(amount)));
+				.andExpect(status().isOk()).andExpect(jsonPath("$.name", is(name)))
+				.andExpect(jsonPath("$.amount", is(amount)));
 	}
 }
