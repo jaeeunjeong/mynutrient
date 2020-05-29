@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import com.mynutrient.demo.config.auth.LoginUser;
 import com.mynutrient.demo.config.auth.dto.SessionUser.SessionUser;
 import com.mynutrient.demo.dto.PostsResponseDto;
 import com.mynutrient.demo.service.PostsService;
@@ -18,12 +19,12 @@ import lombok.RequiredArgsConstructor;
 public class IndexController {
 
 	private final PostsService postService;
-	private final HttpSession httpSession;
+	//private final HttpSession httpSession;
 	
 	@GetMapping("/")
-	public String index(Model model) {
+	public String index(Model model, @LoginUser SessionUser user) {
 		model.addAttribute("posts",postService.findAllDesc());
-		SessionUser user = (SessionUser) httpSession.getAttribute("user");
+		//SessionUser user = (SessionUser) httpSession.getAttribute("user");
 		if(user != null) {
 			model.addAttribute("userName", user.getName());
 		}
