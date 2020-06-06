@@ -12,14 +12,14 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-/*Entity Class : table과 관련있는 class*/
+
 
 @Getter
 @NoArgsConstructor
 @Entity //
 public class Posts extends BaseTimeEntity{
 	
-	@Id//해당 테이블의 pk
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
