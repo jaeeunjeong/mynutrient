@@ -5,7 +5,7 @@ import java.io.Serializable;
 import com.mynutrient.demo.domain.user.User;
 
 import lombok.Getter;
-
+/***/
 @Getter
 public class SessionUser implements Serializable{
 	private String name;

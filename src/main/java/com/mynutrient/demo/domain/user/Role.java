@@ -2,7 +2,7 @@ package com.mynutrient.demo.domain.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-
+/** 사용자 권한을 관리할 Enum Class*/
 @Getter
 @RequiredArgsConstructor
 public enum Role {

@@ -13,7 +13,7 @@ import com.mynutrient.demo.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+/** 사용자 정보를 담당할 도메인*/
 @Getter
 @NoArgsConstructor
 @Entity

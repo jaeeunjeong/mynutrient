@@ -21,7 +21,7 @@ import com.mynutrient.demo.domain.user.User;
 import com.mynutrient.demo.domain.user.UserRepository;
 
 import lombok.RequiredArgsConstructor;
-
+/***/
 @RequiredArgsConstructor
 @Service
 public class CustomOauth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User>{

@@ -7,7 +7,7 @@ import com.mynutrient.demo.domain.user.User;
 
 import lombok.Builder;
 import lombok.Getter;
-
+/***/
 @Getter
 public class OAuthAttributes {
 	private Map<String, Object> attributes;
