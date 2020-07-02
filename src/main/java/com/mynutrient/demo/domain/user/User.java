@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import com.mynutrient.demo.BaseTimeEntity;
+import com.mynutrient.BaseTimeEntity;
 
 import lombok.Builder;
 import lombok.Getter;

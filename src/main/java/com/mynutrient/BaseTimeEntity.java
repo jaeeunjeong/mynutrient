@@ -1,4 +1,4 @@
-package com.mynutrient.demo;
+package com.mynutrient;
 
 import java.time.LocalDateTime;
 

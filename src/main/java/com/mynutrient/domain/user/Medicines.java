@@ -26,6 +26,7 @@ public class Medicines {
 	@Column(length = 500, columnDefinition = "TEXT")
 	private String medicine_name;
 	
+	@Column(nullable = false)
 	private String medicine_times;
 
 	
