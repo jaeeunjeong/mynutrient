@@ -21,20 +21,28 @@ public class Medicines {
 	private Long id;
 	
 	@Column(nullable = false)
-	private Long user_seq;
+	private Long userSeq;
 	
 	@Column(length = 500, columnDefinition = "TEXT")
-	private String medicine_name;
+	private String medicineName;
 	
 	@Column(nullable = false)
-	private String medicine_times;
-
+	private String medicineTimes;
+	
+	//content 같은 부분 추가해야함.
+	@Column(nullable = false)
+	private String content;
 	
 	@Builder
 	public Medicines(Long user_seq, String medicine_name, String medicine_times) {
-		this.user_seq = user_seq;
-		this.medicine_name = medicine_name;
-		this.medicine_times = medicine_times;
+		this.userSeq = user_seq;
+		this.medicineName = medicine_name;
+		this.medicineTimes = medicine_times;
 	}
 	
+	public void update(String medicine_name, String medicine_times, String content) {
+		this.medicineName = medicine_name;
+		this.medicineTimes = medicine_times;
+		this.content = content;
+	}
 }
