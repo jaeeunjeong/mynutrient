@@ -34,10 +34,11 @@ public class Medicines {
 	private String content;
 	
 	@Builder
-	public Medicines(Long user_seq, String medicine_name, String medicine_times) {
+	public Medicines(Long user_seq, String medicine_name, String medicine_times, String content) {
 		this.userSeq = user_seq;
 		this.medicineName = medicine_name;
 		this.medicineTimes = medicine_times;
+		this.content = content;
 	}
 	
 	public void update(String medicine_name, String medicine_times, String content) {
